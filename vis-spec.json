@@ -13,9 +13,24 @@
       { "category": "H", "value": 87 }
     ]
   },
-  "mark": { "type": "bar", "color": "green" },
-  "encoding": {
-    "x": { "field": "category", "type": "nominal", "axis": { "labelAngle": -90 } },
-    "y": { "field": "value", "type": "quantitative" }
-  }
+  "layer": [
+    {
+      "mark": { "type": "bar", "color": "green" },
+      "encoding": {
+        "x": { "field": "category", "type": "nominal", "axis": { "labelAngle": -90 } },
+        "y": { "field": "value", "type": "quantitative" }
+      }
+    },
+    {
+      "mark": { "type": "bar", "fill": null, "stroke": "red", "strokeWidth": 3 },
+      "encoding": {
+        "x": { "field": "category", "type": "nominal" },
+        "y": { "field": "value", "type": "quantitative" },
+        "opacity": {
+          "condition": { "test": "datum.category == 'D'", "value": 1 },
+          "value": 0
+        }
+      }
+    }
+  ]
 }
