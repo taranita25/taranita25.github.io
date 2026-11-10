@@ -13,10 +13,9 @@
       { "category": "H", "value": 87 }
     ]
   },
-  "mark": "bar",
+  "mark": { "type": "bar", "color": "green" },
   "encoding": {
-    "x": { "field": "category", "type": "nominal", "axis": { "labelAngle": 0 } },
-    "y": { "field": "value", "type": "quantitative" },
-    "color": { "field": "category", "type": "nominal", "legend": null }
+    "x": { "field": "category", "type": "nominal", "axis": { "labelAngle": -90 } },
+    "y": { "field": "value", "type": "quantitative" }
   }
 }
